@@ -8,7 +8,7 @@
   #define TIMER1_PERIOD   10  //Microseconds
   #define PREESCALER      50
   
-  #define NUM_SENSORS    16
+  #define NUM_SENSORS     16
   #define ANALOG_INPUT   PA1
 
   #define MUX_S0         PA5
