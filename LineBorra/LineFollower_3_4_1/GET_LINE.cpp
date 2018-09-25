@@ -96,8 +96,8 @@ void UpdateLine(void){
     LastPosicion = Posicion;
   }
   else{
-    if(LastPosicion < 7500) Posicion = 0;
-    else        Posicion = 15000;
+    if(LastPosicion < (((int)(NUM_SENSORS)-1)*500)) Posicion = 0;
+    else        Posicion = (((int)(NUM_SENSORS)-1)*1000);
   }
   //return(Posicion);
 }

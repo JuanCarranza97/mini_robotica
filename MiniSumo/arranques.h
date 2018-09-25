@@ -13,7 +13,8 @@
 
    void IniciosOrillas(int x);
 
-   void inicioOrilla0(void);
-   void inicioOrilla1(void);
-   void inicioOrilla2(void);
+   void inicioIzquieraCentro(void);
+   void inicioDerechaCentro(void);
+   void inicioDerechaOrilla(void);
+   void inicioDerechaOrill2(void);
 #endif

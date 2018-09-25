@@ -8,7 +8,7 @@ void PID_Controller::Compute(float input){
   if((millis()-LastTime)>SampleTime){
     //UART_PORT.println("Kp = "+String(Kp)+", Ki = "+String(Ki)+", Kd = "+String(Kd)+", SetPoint = "+String(SetPoint)+", Samples = "+String(SampleTime));
     
-    float Error = 7500-input;
+    float Error = SetPoint-input;
     sumError += Error;
     P = (Error*(float(Kp)/Kp_Div));
     I = ((float(Ki)/Ki_Div)*(float(SampleTime)/1000.0)*sumError);

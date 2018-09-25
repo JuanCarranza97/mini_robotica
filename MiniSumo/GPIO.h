@@ -9,8 +9,8 @@
     #define PUSH_1        12
     #define PUSH_2        11
 
-    #define LEFT_SENSOR    15
-    #define RIGHT_SENSOR   14
+    #define LEFT_SENSOR    15   //A1
+    #define RIGHT_SENSOR   14   //A0
 
     #define READY           7
     #define GO              8

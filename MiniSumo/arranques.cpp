@@ -1,8 +1,9 @@
 #include "arranques.h"
 
-inicios iniciosOrillas[]={{inicioOrilla0,"Robot Al frente 0"},
-                          {inicioOrilla1,"Robot Al frente 1"},
-                          {inicioOrilla2,"Robot Al frente 2"},
+inicios iniciosOrillas[]={{inicioIzquieraCentro,"Robot Al frente 0"},
+                          {inicioDerechaCentro,"Robot Al frente 1"},
+                          {inicioDerechadsdsfsgfd,"Robdsgfudhudgsh gdsghdjisgufv y"},
+                       
 };
 
 #define INICIOS_ORILLAS_TAM    (sizeof(iniciosOrillas)/sizeof(inicios))
@@ -13,11 +14,8 @@ void IniciosOrillas(int x){
   iniciosOrillas[x].Callback();
 }
 
-void inicioOrilla0(void){
-  
-}
 
-void inicioOrilla1(void){
+void inicioIzquieraCentro(void){
   lado = 1;
   tiempoP=millis();
   digitalWrite(LED_1,LOW);
@@ -35,8 +33,42 @@ void inicioOrilla1(void){
   digitalWrite(LED_3,LOW);
 }
 
-void inicioOrilla2(void){
- tiempoP=millis();
+void inicioDerechaCentro(void){
+  tiempoP=millis();
+  digitalWrite(LED_1,LOW);
+  digitalWrite(LED_2,LOW);
+  digitalWrite(LED_3,LOW);
+  do{
+    tiempoA = millis()-tiempoP;
+
+      if(tiempoA < 100)                       setMotors(-100,100);
+      else if(tiempoA >= 100 && tiempoA < 200)digitalWrite(LED_2,HIGH);
+      else                            digitalWrite(LED_3,HIGH);
+  }while(tiempoA < 400);
+  digitalWrite(LED_1,LOW);
+  digitalWrite(LED_2,LOW);
+  digitalWrite(LED_3,LOW);
+}
+
+ void inicioDerechaOrilla(void){
+   tiempoP=millis();
+  digitalWrite(LED_1,LOW);
+  digitalWrite(LED_2,LOW);
+  digitalWrite(LED_3,LOW);
+  do{
+    tiempoA = millis()-tiempoP;
+
+      if(tiempoA < 100)                       setMotors(-100,100);
+      else if(tiempoA >= 100 && tiempoA < 200)digitalWrite(LED_2,HIGH);
+      else                            digitalWrite(LED_3,HIGH);
+  }while(tiempoA < 400);
+  digitalWrite(LED_1,LOW);
+  digitalWrite(LED_2,LOW);
+  digitalWrite(LED_3,LOW);
+ }
+
+void inicioDerechaOrill2(void){
+     tiempoP=millis();
   digitalWrite(LED_1,LOW);
   digitalWrite(LED_2,LOW);
   digitalWrite(LED_3,LOW);
